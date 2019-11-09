@@ -26,24 +26,25 @@ html {
   /* /////ASIDE*/
 
   .asideContainer{
-    width:500px;
+    width:16%;
     display: flex;
     flex-direction: column;
   }
   .sizesContainer{
-    margin-left:100px;
+    margin-left:10%;
+    margin-top:30%;
 
   }
 .sizeFilters{
   display: flex;
   margin-bottom: 10px;
   margin-top:10px;
-  width:160px;
+  width:80%;
   flex-wrap: wrap;
 }
 .sizes{
   display: flex;
-  background: #888;
+  background: rgb(179, 179, 179);
   border-radius: 50%;
   width:30px;
   height:30px;
@@ -76,15 +77,170 @@ html {
 
 
 /*//////MAIN  */
+.mainContainer{
+  margin-top:100px;
+  width:70%;
+  margin:auto;
+  margin:100px;
+}
 .orderByLine{
   display: flex;
   justify-content: space-between;
   width:100%;
+  margin-bottom: 10px;
+}
+.orderBy{
+  display: flex;
+  margin-right:80px;
+}
+.orderBy div{
+
 }
 .items{
   display: flex;
  flex-wrap: wrap;
+ margin:10px;
+ 
 }
-.items img{
+.pictures{
+  margin:5px;
+  border:1px solid white;
   display: flex;
+  flex-direction: column;
+  
+  
+}
+.pictureContainer{
+  width:25%;
+}
+.pictures:hover{
+  border:1px solid rgb(235,235,235);
+}
+.pictures {position: relative;}
+.freeShipping{
+  position: absolute;
+  right:0px;
+  top:10px;
+  color:white;
+  font-size: 12px;
+  background:black;
+  width:80px;
+  height:25px;
+  padding:0px;
+  line-height: 25px;
+}
+.freeShippingHidden{
+  color:transparent;
+  background: transparent;
+  position: absolute;
+  right:0px;
+  top:10px;
+}
+
+
+.itemTitle{
+text-align: center;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+width:90%;
+
+
+
+
+}
+.orItem{
+  text-align: center;
+}
+.itemPrice{
+  text-align: center;
+}
+.itemPriceMultiple{
+  text-align: center;
+}
+.itemAddToCart{
+  width:90%;
+  height:40px;
+  text-align: center;
+  font-size: 20px;
+  color:white;
+  background:black;
+  line-height: 40px;
+  margin:auto;
+}
+.itemAddToCart:hover{
+  background: rgb(231,181,35);
+}
+
+/*/////CART*/
+
+.cartContainer{
+  
+  background: rgb(25,25,29);
+}
+.cartItems{
+  display: flex;
+  margin-bottom: 20px;
+  border: 1px solid rgb(76,75,78);
+  justify-content: space-between;
+  
+}
+.cartItems img{
+  width:18%;
+}
+.itemTitleAndDescription{
+  color:white;
+}
+.cartItemTitle{
+  color:white;
+  white-space: normal;
+  font-size: 15px;
+
+
+}
+.cartItemStyle, .quantity{
+  color:rgb(76,75,78);
+}
+.cartPriceContainer{
+  text-align: end;
+}
+.cartPriceContainer>button{
+  background: rgb(76,75,78);
+  border:none
+}
+.cartPrice{
+  color: gold;
+  margin-bottom: 10px;
+  margin-top:10px;
+}
+/* ///checkout area*/
+.checkout{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.subTitle{
+  padding-left:3px;
+  color:rgb(76,75,78);
+}
+.subCalc{
+  text-align: end;
+  padding-right:3px;
+}
+.subTotal, .tax, .grandTotal{
+  color:gold;
+}
+.subTotalInstallments{
+  color:rgb(76,75,78);
+}
+.checkoutButton{
+  width:90%;
+  display: flex;
+  margin:auto;
+  justify-content: center;
+  align-items: center;
+  color:rgb(76,75,78);
+  background:black;
+  height:50px;
+ 
 }
