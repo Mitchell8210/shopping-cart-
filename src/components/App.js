@@ -9,6 +9,7 @@ import Main from './Main'
 import Cart from './Cart'
 
 export default props => {
+
   return (
     <Provider store={store}>
       <div className="appContainer">

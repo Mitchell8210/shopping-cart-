@@ -17,9 +17,21 @@ let cartIds = cart.map(item =>{
         item.item.id
     )
 })
-function handleAddSame(){
 
-}
+let myCart = cart.map(item =>{
+    return item.item.id
+})
+let mySet = new Set(cartIds)
+console.log('cart:',cart)
+console.log('mySet:',[...mySet])
+
+let filteredCart= [...mySet].filter((item, index) =>{
+    return(
+        cart.indexOf(item) >=index
+    )
+})
+console.log('filteredCart:',filteredCart)
+
 
 /////////
 let prices= cart.map(item=>{
@@ -38,9 +50,7 @@ let grandTotal = (Number(subTotal) + Number(taxes))
 
 
         <div className="cartContainer">
-            <div className="cartDisplayButton">Cart:{cart.length}</div>
             {cart.map(item=>{
-                console.log('item',item)
                 return(
                     <div key={'the'+item.id} className="cartItems">
                         <img src={`/assets/${item.item.sku}_2.jpg`}/>
@@ -48,7 +58,7 @@ let grandTotal = (Number(subTotal) + Number(taxes))
                         <div className="itemTitleAndDescription">
                         <div className="cartItemTitle">{item.item.title}</div>
                         <div className="cartItemStyle">{item.item.style}</div>
-                        <div className="quantity">Quantity: {(item.quantity? item.quantity+=1:"")}</div>
+                        <div className="quantity">Quantity: {(item.quantity? item.quantity:"")}</div>
 
                         </div>
                         <div className="cartPriceContainer">

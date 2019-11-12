@@ -2,15 +2,16 @@ import React, {useState}from 'react'
 import { useCart } from '../Redux/ducks/Cart'
 import {Link} from 'react-router-dom'
 import {useMain} from '../Redux/ducks/Main_pictures'
+import Icon from '../Icon'
 
 export default function Aside(){
     // const {add} = useCart()
     const [item, setItem] = useState({})
-    const {data, addItem, add} = useMain()
+    const {data, addItem, add, cart} = useMain()
 
     return (
         <div className="asideContainer">
-        <div>(gitHub)</div>
+        <div className="gitHub"><Icon icon='github'></Icon></div>
         <div className="sizesContainer">
             <div>Sizes:</div>
         <div className="sizeFilters">
@@ -32,12 +33,16 @@ export default function Aside(){
         <div className="sizes">XL</div>
         <div className="sizes">XXL</div>
         </div>
+        
         <div className="sizesNote">Leave a star on Github if this repository was useful :)</div>
         <div className="sizesStar">
         <button>Star</button>
         <div>938</div>
+        
         </div>
+        
         </div>
+        
         </div>
 
     )
